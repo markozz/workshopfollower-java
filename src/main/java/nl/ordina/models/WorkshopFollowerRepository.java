@@ -35,7 +35,7 @@ public class WorkshopFollowerRepository {
     }
 
     public String createWorkshopFollower(WorkshopFollower user) throws InvalidResponse {
-        RequestBody body = RequestBody.create(gson.toJson(user), MediaType.get("application/json"));
+        RequestBody body = RequestBody.create(gson.toJson(user), MediaType.get("application/json; charset=utf-8"));
         Request req = new Request.Builder()
                 .url(String.format("%s/workshopfollowers", baseurl))
                 .header("Content-Type", "application/json")
